@@ -7,10 +7,12 @@ class Server {
     * @param {Object} container - Dependency Injection.
     * @param {import('../../../../config/index')} container.config
     * @param {import('src/interface/http/Router')} container.router
+    * @param {import('src/infra/logging/logger')} container.logger
     * @param {import('src/container')} container.container
     */
-    constructor ({ config, router, container }) {
+    constructor ({ config, router, container, logger }) {
         this.config = config;
+        this.logger = logger;
         this.express = express();
         this.express.use(scopePerRequest(container));
         this.setRoutes(router);
@@ -23,7 +25,7 @@ class Server {
     }
 
     setLogger() {
-      this.express.use(morgan('combined'));
+      this.express.use(morgan('combined', { stream: this.logger.stream }));
     }
 
     setExceptions () {
@@ -39,7 +41,7 @@ class Server {
         const ENV = this.config.application.env;
 
         return this.express.listen(SERVER_PORT || 3000, () => {
-            console.log(`Server started on port: ${ SERVER_PORT } - Environment ${ ENV }`);
+            this.logger.info(`Server started on port: ${ SERVER_PORT } - Environment ${ ENV }`);
         });
 
     }
