@@ -49,13 +49,15 @@ Set the environment variables by creating a `.env` file following the `env.copy`
   $ npm run test:features
   ```
 
+After running the server, you can find the api docs at `http://localhost:{APP_PORT}/api/docs/`
+
 
 # Todo: 
 - [x] Create repo and readme.
 - [x] Add awilix DI Container
 - [x] Add express server interface
 - [x] Add logger infrastructure
-- [ ] Add Swagger middleware
+- [x] Add Swagger middleware
 - [ ] Add http client integration example
 - [ ] Add sqs client integration example
 - [ ] Add jest config

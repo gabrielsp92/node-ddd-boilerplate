@@ -17,7 +17,7 @@ container
     container: awilix.asValue(container),
   })
   .loadModules(
-    [],
+    ['src/interface/http/middleware/**/*.js',],
     {
       formatName: 'camelCase',
       resolverOptions: {
