@@ -1,0 +1,22 @@
+{
+  "name": "node-ddd-boilerplate",
+  "version": "1.0.0",
+  "description": "an api boilerplate for nodejs using ddd principles",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabrielsp92/node-ddd-boilerplate.git"
+  },
+  "keywords": [
+    "ddd"
+  ],
+  "author": "Gabriel Soares Pereira <gabriel-soares-jf@hotmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabrielsp92/node-ddd-boilerplate/issues"
+  },
+  "homepage": "https://github.com/gabrielsp92/node-ddd-boilerplate#readme"
+}
