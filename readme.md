@@ -1,7 +1,6 @@
 # Node.js DDD api boilerplate
 
-This is a personal project for a custom nodejs boilerplate, following the DDD architecture,
-its is a starting point for micro services to be developed.
+My custom nodejs boilerplate, following the DDD architecture.
 
 ## Main Technologies
 
