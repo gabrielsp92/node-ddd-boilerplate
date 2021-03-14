@@ -58,8 +58,7 @@ After running the server, you can find the api docs at `http://localhost:{APP_PO
 - [x] Add express server interface
 - [x] Add logger infrastructure
 - [x] Add Swagger middleware
-- [ ] Add http client integration example
-- [ ] Add sqs client integration example
+- [x] Add http client integration example
 - [ ] Add jest config
 - [ ] Add 100% test coverage
 - [ ] Add Changelog.md file
