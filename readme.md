@@ -3,9 +3,9 @@
 This is a personal project for a custom nodejs boilerplate, following the DDD architecture,
 its is a starting point for micro services to be developed.
 
-## Main techonologies used:
+## Main Technologies
 
-- [Node](http://nodejs.org) - Server side javascript runtime.
+- [Nodejs](http://nodejs.org) - Javascript runtime.
 - [Awilix](https://www.npmjs.com/package/awilix) - Dependency Injection and Inversion of Control framework.
 - [Express](https://www.npmjs.com/package/express) - HTTP server framework.
 - [Winston](https://www.npmjs.com/package/winston) - Centralizing and transporting logs.
@@ -52,9 +52,9 @@ Set the environment variables by creating a `.env` file following the `env.copy`
 
 # Todo: 
 - [x] Create repo and readme.
-- [ ] Add awilix DI Container
-- [ ] Add express server interface
-- [ ] Add logger infrastructure
+- [x] Add awilix DI Container
+- [x] Add express server interface
+- [x] Add logger infrastructure
 - [ ] Add Swagger middleware
 - [ ] Add http client integration example
 - [ ] Add sqs client integration example
