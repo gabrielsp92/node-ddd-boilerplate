@@ -15,17 +15,9 @@ class Server {
         this.logger = logger;
         this.express = express();
         this.express.use(scopePerRequest(container));
-        this.setRoutes(router);
-        this.setLogger();
+        this.express.use(morgan('combined', { stream: this.logger.stream }));
+        this.express.use(router);
         this.setExceptions();
-    }
-
-    setRoutes(router) {
-      this.express.use(router);
-    }
-
-    setLogger() {
-      this.express.use(morgan('combined', { stream: this.logger.stream }));
     }
 
     setExceptions () {
