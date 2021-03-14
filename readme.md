@@ -19,17 +19,12 @@ its is a starting point for micro services to be developed.
 ## Project Setup
 Set the environment variables by creating a `.env` file following the `env.copy` example, then, run the following scripts:
 
-- Build containers with the environment infra structure
-  ```shell 
-  $ docker-compose up -d 
-  ```
-
-- Install project dependencies
+- Install node modules
   ```shell
   $ npm install
   ```
 
-- Run project in development mode with nodemon
+- Run project in development mode with hot-reload
   ```shell
   $ npm run dev
   ```
