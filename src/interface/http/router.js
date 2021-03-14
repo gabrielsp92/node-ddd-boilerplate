@@ -15,14 +15,11 @@ module.exports = (ctx) => {
         .use(express.urlencoded({ extended: true }))
         .use(compression());
 
-        
-    DefaultRouter.use('/api', ApiRouter);
-
     ApiRouter.get('/health-check', (_, res) => res.json({ status: 'UP' }));
-        
+    ApiRouter.use('/character', handle(ctx.characterController.router));
     ApiRouter.use('/docs', ctx.swaggerMiddleware);
-        
-
+    
+    DefaultRouter.use('/api', ApiRouter);
     DefaultRouter.use('/*', (_, res) => res.status(404).send({ message: 'Not found' }));
 
     return DefaultRouter;

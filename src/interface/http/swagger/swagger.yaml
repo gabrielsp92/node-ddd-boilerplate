@@ -21,6 +21,36 @@ paths:
             application/json:
              schema:
               $ref: '#/components/schemas/serverStatus'
+
+  /character/:
+    get:
+      tags:
+        - Character
+      operationId: list-characters
+      summary: list rick and morty characters
+      description: this endpoint returns a paginated list of rick and morty characters.
+      parameters:
+        - in: query
+          name: name
+          type: string
+        - in: query
+          name: status
+          type: string
+        - in: query
+          name: species
+          type: string
+        - in: query
+          name: type
+          type: string
+        - in: query
+          name: gender
+          type: string
+        - in: query
+          name: page
+          type: number
+      responses:
+        200:
+          description: 'Characters list'
             
 components:
   schemas:

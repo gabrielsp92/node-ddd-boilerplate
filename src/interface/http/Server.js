@@ -14,9 +14,9 @@ class Server {
         this.config = config;
         this.logger = logger;
         this.express = express();
+        this.express.use(router);
         this.express.use(scopePerRequest(container));
         this.express.use(morgan('combined', { stream: this.logger.stream }));
-        this.express.use(router);
         this.setExceptions();
     }
 
@@ -24,7 +24,8 @@ class Server {
         this.express.use(async (err, req, res, next) => {
             let title = 'Internal Server Error';
             if(err.name === 'Validation') title = 'Validation';
-            return res.status(err.status || 500).json({ error: title, details:'err.message' });
+            this.logger.error(err);
+            return res.status(err.status || 500).json({ error: title, details: err.message });
         });
     }
 

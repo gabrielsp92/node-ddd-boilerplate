@@ -4,5 +4,15 @@
         "service_name": "DDD boilerplate",
         "port": "$APP_PORT",
         "log_path": "$APP_LOGS_PATH"
+    },
+    "integration": {
+        "rest": {
+            "rickAndMorty": {
+                "baseURL": "$RICK_AND_MORTY_API_BASE_URL",
+                "timeout": 10000,
+                "rejectUnauthorized": false,
+                "externalCallMsg": "Http request to rick and morty api"
+            }
+        }
     }
 }
