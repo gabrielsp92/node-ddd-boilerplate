@@ -7,7 +7,7 @@ const startApplication = async () => {
     app
         .start()
         .catch((error) => {
-            console.log(error)
+            app.logger.error(error)
             process.exit();
         });
 };
