@@ -1,0 +1,8 @@
+{
+    "application": {
+        "env": "$NODE_ENV",
+        "service_name": "DDD boilerplate",
+        "port": "$APP_PORT",
+        "log_path": "$APP_LOGS_PATH"
+    }
+}
