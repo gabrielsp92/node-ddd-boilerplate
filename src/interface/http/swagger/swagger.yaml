@@ -1,0 +1,34 @@
+openapi: 3.0.1
+info:
+  title: Node DDD boilerplate
+  version: 0.3.0
+  description: '<p> This is the Node DDD boilerplate, openApi specifications'
+servers:
+  - url: http://localhost:4000/api
+    description: Local
+paths:
+  /health-check:
+    get:
+      tags:
+        - System
+      operationId: /api/health-check
+      summary: Check if the server is up and running
+      description: This endpoint returns the server current health status.
+      responses:
+        200:
+          description: The current system status
+          content:
+            application/json:
+             schema:
+              $ref: '#/components/schemas/serverStatus'
+            
+components:
+  schemas:
+    serverStatus:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "UP"
+
+
