@@ -12,7 +12,6 @@ module.exports = (ctx) => ({
         const result = await ctx.listCharactersOperation.execute(params);
         return res.status(Status.OK).json(result);
       } catch (err) {
-        console.log(err)
         next(err);
       }
     },

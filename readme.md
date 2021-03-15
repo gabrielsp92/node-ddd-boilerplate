@@ -17,7 +17,7 @@ My custom nodejs boilerplate, following the DDD architecture.
 
 
 ## Project Setup
-Set the environment variables by creating a `.env` file following the `env.copy` example, then, run the following scripts:
+Before running the project, check if you have Nodejs 14.0.> installed and remember to set the environment variables by creating a `.env` file following the `env.copy` example.
 
 - Install node modules
   ```shell

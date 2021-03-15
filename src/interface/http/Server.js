@@ -17,19 +17,6 @@ class Server {
         this.express.use(morgan('combined', { stream: this.logger.stream }));
         this.express.use(router);
         this.express.use(scopePerRequest(container));
-        this.setExceptions();
-    }
-
-    setExceptions () {
-        this.express.use(async (err, req, res, next) => {
-            if (err) this.logger.error(err);
-            return res
-                .status(err.statusCode || 500)
-                .json({ 
-                    error: err.errorType || err.title,
-                    details: err.details || err.message 
-                });
-        });
     }
 
     start() {

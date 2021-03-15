@@ -20,7 +20,8 @@ module.exports = (ctx) => {
     ApiRouter.use('/docs', ctx.swaggerMiddleware);
     
     DefaultRouter.use('/api', ApiRouter);
-    DefaultRouter.use('/*', (_, res) => res.status(404).send({ message: 'Not found' }));
+    DefaultRouter.use('/*', (_, res) => ctx.exception.notFound({ message: 'Not found' }));
+    DefaultRouter.use(ctx.httpErrorMiddleware);
 
     return DefaultRouter;
 };
