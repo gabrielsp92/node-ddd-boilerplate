@@ -26,6 +26,7 @@ container
       'src/interface/http/middleware/**/*.js',
       'src/interface/http/schemas/**/*.js',
       'src/interface/http/controllers/**/*.js',
+      'src/infra/errors/*.js',
       'src/app/services/*.js',
       'src/app/operations/*.js',
     ],

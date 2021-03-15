@@ -7,9 +7,10 @@ My custom nodejs boilerplate, following the DDD architecture.
 - [Nodejs](http://nodejs.org) - Javascript runtime.
 - [Awilix](https://www.npmjs.com/package/awilix) - Dependency Injection and Inversion of Control framework.
 - [Express](https://www.npmjs.com/package/express) - HTTP server framework.
-- [Winston](https://www.npmjs.com/package/winston) - Centralizing and transporting logs.
-- [Joi](https://www.npmjs.com/package/joi) - Input and schema validations.
+- [Winston](https://www.npmjs.com/package/winston) - Centralizing and transporting log streams.
+- [Joi](https://www.npmjs.com/package/joi) - Schema validations.
 - [Structure](https://www.npmjs.com/package/structure) - Used for defining domain entities attributes.
+- [Fejl](https://www.npmjs.com/package/fejl) - Error Handling
 - [Jest](https://www.npmjs.com/package/jest) - Testing framework.
 - [Supertest](https://www.npmjs.com/package/supertest) - Used to test http endpoints and features.
 - [Swagger](https://swagger.io/) - Documentation with openApi specifications.
@@ -53,6 +54,7 @@ After running the server, you can find the api docs at `http://localhost:{APP_PO
 - [x] Add logger infrastructure
 - [x] Add Swagger middleware
 - [x] Add http client integration example
+- [x] Add Error classes with fejl
 - [ ] Add jest config
 - [ ] Add 100% test coverage
 - [ ] Add Changelog.md file
