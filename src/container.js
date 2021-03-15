@@ -24,6 +24,7 @@ container
   .loadModules(
     [
       'src/interface/http/middleware/**/*.js',
+      'src/interface/http/constants/**/*.js',
       'src/interface/http/schemas/**/*.js',
       'src/interface/http/controllers/**/*.js',
       'src/infra/errors/*.js',
