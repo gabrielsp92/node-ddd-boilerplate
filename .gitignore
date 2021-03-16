@@ -2,3 +2,4 @@
 .env
 /logs
 .vscode
+/coverage

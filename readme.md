@@ -1,6 +1,6 @@
 # Node.js DDD api boilerplate
 
-My custom nodejs boilerplate, following the DDD architecture.
+My custom nodejs boilerplate, following the Clean Architecture and DDD principles.
 
 ## Main Technologies
 
@@ -55,7 +55,8 @@ After running the server, you can find the api docs at `http://localhost:{APP_PO
 - [x] Add Swagger middleware
 - [x] Add http client integration example
 - [x] Add Error classes with fejl
-- [ ] Add jest config
+- [x] Add jest unit config
+- [ ] Add jest features config
 - [ ] Add 100% test coverage
 - [ ] Add Changelog.md file
 - [ ] Add License file
